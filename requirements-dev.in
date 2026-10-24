@@ -1,0 +1,4 @@
+# Pinned verification tools; resolve with uv pip compile --generate-hashes.
+pytest==9.1.1
+hatchling==1.32.4
+build==1.6.1

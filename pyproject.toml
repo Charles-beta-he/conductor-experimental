@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "acp-conductor-experiment"
+version = "0.0.1"
+description = "Proposal-only standalone scheduling policy experiment; not an execution authority"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "PROVENANCE.md"]
+dependencies = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/acp_conductor_experiment"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "pyproject.toml", "LICENSE", "PROVENANCE.md", "README.md", "SPEC.md", "tests", "demo.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
